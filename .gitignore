@@ -1,0 +1,5 @@
+.agents/reports/*
+!.agents/reports/.gitkeep
+!.agents/reports/completed/
+.agents/reports/completed/*
+!.agents/reports/completed/.gitkeep
