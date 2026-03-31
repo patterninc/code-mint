@@ -4,6 +4,20 @@ Code-mint is the **source repository** for harness-engineering documentation, sk
 
 This repository is reference material, not an application. The actual onboarding work happens inside the target repository that adopts these assets. Do not try to build or run code-mint itself.
 
+## Instructions To Use
+
+Navigate to your target codebase, and tell an agent operating within that codebase:
+
+```text
+Use https://github.com/patterninc/code-mint as the canonical source for onboarding this repository for AI-first development. Follow its instructions, do not overwrite existing agent instructions blindly, start in assessment-first mode, keep `docs/onboarding-checklist.md` updated as the system of record, and stop for approval before remediation.
+```
+
+If you are applying it to a directory within a larger repository, also specify the onboarding scope:
+
+```text
+Onboarding scope: [path relative to repo root, for example `apps/my-service`]. Treat onboarding paths as relative to that directory, and also read the repo root `README.md` plus any `README.md` files along the path to that scope.
+```
+
 ## Three pillars
 
 Harness work here is organized around three ideas. The [six outcomes](#outcome-map) below are the concrete proof model.
