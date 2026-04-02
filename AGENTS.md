@@ -20,6 +20,7 @@ When working in this repo:
 | `AGENTS.md` | Concise agent-facing instructions for this repository (this file) |
 | `.agents/skills/` | Portable skills copied into target repositories |
 | `.agents/rules/` | Guidance on project-specific persistent rules |
+| `.agents/code-mint-status.json` | Machine-readable onboarding fingerprint (committed) |
 | `docs/framework.md` | Founding principles and mechanical standards |
 | `docs/outcomes.md` | North-star onboarding outcomes and evidence model |
 | `docs/onboarding-checklist.md` | Canonical outcome checklist template |

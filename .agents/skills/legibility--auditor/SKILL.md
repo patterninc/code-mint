@@ -123,7 +123,7 @@ Write the report to `.agents/reports/legibility--auditor-audit.md` using this st
 Run `legibility--enhancer` to collaboratively remediate findings.
 ```
 
-After writing the report, update `docs/onboarding-checklist.md`. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
+After writing the report, update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the current `navigate` outcome status and date. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
 
 ## Detailed Criteria
 

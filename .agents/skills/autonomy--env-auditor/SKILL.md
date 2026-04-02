@@ -96,4 +96,4 @@ Write the report to `.agents/reports/autonomy--env-auditor-audit.md`:
 Run `autonomy--env-creator` to remediate findings.
 ```
 
-After writing the report, update `docs/onboarding-checklist.md`. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
+After writing the report, update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the current `smoke_path` outcome status and date. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.

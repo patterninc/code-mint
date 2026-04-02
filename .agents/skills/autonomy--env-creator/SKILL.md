@@ -243,4 +243,4 @@ Update the project's AGENTS.md and/or README to include:
 4. If generation or startup verification fails, keep the old `.env` in place or restore it from the backup before trying again.
 5. If a `.env.example` file exists, keep it as a reference or compatibility file only. Point it to the primary bootstrap path if helpful.
 6. Archive the audit report to `.agents/reports/completed/autonomy--env-auditor-audit-{YYYY-MM-DD}.md`.
-7. Update `docs/onboarding-checklist.md`. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
+7. Update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the current `smoke_path` outcome status and date. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.

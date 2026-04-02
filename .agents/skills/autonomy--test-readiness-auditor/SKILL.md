@@ -131,7 +131,7 @@ Write the report to `.agents/reports/autonomy--test-readiness-auditor-audit.md`:
 Run `autonomy--test-readiness-creator` to remediate findings.
 ```
 
-After writing the report, update `docs/onboarding-checklist.md`. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
+After writing the report, update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the current `self_test` outcome status and date. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
 
 ## Detailed Criteria
 

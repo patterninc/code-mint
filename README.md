@@ -97,6 +97,7 @@ git checkout -b chore/code-mint-phase-1-assessment
 git clone https://github.com/patterninc/code-mint.git .code-mint-source
 mkdir -p "$TARGET_SCOPE/.agents/reports" "$TARGET_SCOPE/.agents/reports/completed" "$TARGET_SCOPE/docs"
 cp -RL .code-mint-source/.agents/skills "$TARGET_SCOPE/.agents/"
+cp .code-mint-source/.agents/code-mint-status.json "$TARGET_SCOPE/.agents/"
 cp .code-mint-source/docs/framework.md "$TARGET_SCOPE/docs/"
 cp .code-mint-source/docs/outcomes.md "$TARGET_SCOPE/docs/"
 cp .code-mint-source/docs/onboarding-checklist.md "$TARGET_SCOPE/docs/"

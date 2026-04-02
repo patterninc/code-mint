@@ -9,7 +9,8 @@ This file is intended to be copied into the target repository and updated there 
 1. Start with `Validate Current State` so the repository has a baseline.
 2. Work toward one proof at a time. Do not try to unlock every outcome at once.
 3. Record evidence each time an outcome changes state.
-4. Revisit the file when the user comes back later. It should be obvious what is done, blocked, or still unproven.
+4. Keep `.agents/code-mint-status.json` in sync with this checklist. It is the machine-readable index; this file is the detailed evidence record.
+5. Revisit the file when the user comes back later. It should be obvious what is done, blocked, or still unproven.
 
 ## Status Key
 

@@ -33,7 +33,7 @@ Every outcome should be tracked with the same evidence fields:
 - `Last Validated`: when the evidence was last refreshed
 - `Notes`: what is still manual, flaky, blocked, approval-gated, or intentionally marked `N/A`
 
-Use `docs/onboarding-checklist.md` as the canonical template for that evidence. For an optional skill-by-skill matrix aligned to outcomes, see [`docs/skills-status.md`](skills-status.md).
+Use `docs/onboarding-checklist.md` as the canonical template for that evidence. `.agents/code-mint-status.json` mirrors outcome statuses as a machine-readable index for cross-repo scanning. For an optional skill-by-skill matrix aligned to outcomes, see [`docs/skills-status.md`](skills-status.md).
 
 ## What "Done" Looks Like
 

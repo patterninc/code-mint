@@ -1,0 +1,14 @@
+{
+  "code_mint": "1.0",
+  "scope": ".",
+  "onboarded_at": null,
+  "last_validated": null,
+  "outcomes": {
+    "validate_current_state": { "status": "Not Started", "date": null },
+    "navigate": { "status": "Not Started", "date": null },
+    "self_test": { "status": "Not Started", "date": null },
+    "smoke_path": { "status": "Not Started", "date": null },
+    "bug_reproduction": { "status": "Not Started", "date": null },
+    "sre_investigation": { "status": "Not Started", "date": null }
+  }
+}

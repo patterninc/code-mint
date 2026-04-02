@@ -156,7 +156,7 @@ Subdirectory `AGENTS.md` files **override** parent files — they do not merge. 
 2. Confirm all build/test commands work by running them.
 3. Summarize which directories received local guidance, which were intentionally deferred as simple, and why.
 4. If a legibility audit report was used, archive it to `.agents/reports/completed/legibility--auditor-audit-{YYYY-MM-DD}.md`.
-5. Update `docs/onboarding-checklist.md`. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
+5. Update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the current `navigate` outcome status and date. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
 
 ## Detailed Templates
 

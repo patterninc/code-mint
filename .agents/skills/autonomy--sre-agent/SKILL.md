@@ -243,7 +243,7 @@ If the workflow above doesn't immediately surface the cause, form ranked hypothe
 
 Write a failing test case that reproduces the bug BEFORE proposing any fix. If you cannot reproduce the bug in a test, you do not understand it well enough to fix it.
 
-For onboarding proof, the failing test or deterministic repro recipe is itself the evidence artifact. Capture it in `docs/onboarding-checklist.md` before moving on.
+For onboarding proof, the failing test or deterministic repro recipe is itself the evidence artifact. Capture it in `docs/onboarding-checklist.md` and update `.agents/code-mint-status.json` with the current `bug_reproduction` and `sre_investigation` outcome statuses and dates before moving on.
 
 ## Fix and Confirm
 

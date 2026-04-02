@@ -71,7 +71,7 @@ Work tickets are part of the harness. A vague ticket produces vague output. The 
 
 ## Outcome Map
 
-Outcome names, proof criteria, and primary skill mappings are defined in `docs/outcomes.md`. Track progress and evidence in `docs/onboarding-checklist.md`.
+Outcome names, proof criteria, and primary skill mappings are defined in `docs/outcomes.md`. Track progress and evidence in `docs/onboarding-checklist.md`. `.agents/code-mint-status.json` provides a machine-readable index of outcome statuses for cross-repo scanning.
 
 ## Cross-Cutting Standards
 
