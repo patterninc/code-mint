@@ -107,4 +107,4 @@ Before changing CI behavior, ask for explicit approval if the change will block 
 2. Verify per-file test execution works with the documented command.
 3. Confirm test speed meets benchmarks where practical.
 4. Archive the audit report to `.agents/reports/completed/autonomy--test-readiness-auditor-audit-{YYYY-MM-DD}.md`.
-5. Update `docs/onboarding-checklist.md`. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
+5. Update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the current `self_test` outcome status and date. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.

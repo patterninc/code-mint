@@ -172,4 +172,4 @@ Write the report to `.agents/reports/autonomy--sre-auditor-audit.md`:
 Address findings to enable `autonomy--sre-agent` to operate effectively. If tooling or auth is missing, complete the manual install/authentication work first, then re-run `autonomy--sre-auditor`.
 ```
 
-After writing the report, update `docs/onboarding-checklist.md`. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
+After writing the report, update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the current `sre_investigation` outcome status and date. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.

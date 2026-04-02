@@ -124,4 +124,4 @@ If any step still depends on human approval or real cloud setup, document that b
 ## Step 7: Archive
 
 1. Archive the audit report to `.agents/reports/completed/autonomy--runtime-auditor-audit-{YYYY-MM-DD}.md`
-2. Update `docs/onboarding-checklist.md`. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.
+2. Update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the current `smoke_path` outcome status and date. Optionally update `docs/skills-status.md` if the repository keeps the compatibility view.

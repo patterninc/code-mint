@@ -29,7 +29,7 @@ See `docs/skill-development.md` for the full guide on creating and maintaining s
 
 ## Documentation change checklist (maintainers)
 
-**Single source for outcome vocabulary:** `docs/outcomes.md` is the canonical glossary for outcome names, proof criteria, and primary skill mappings. When you change any of that, edit `docs/outcomes.md` first, then update pointers and checklists in `README.md`, `docs/framework.md`, `docs/onboarding-checklist.md`, `docs/skills-status.md`, and `.agents/skills/meta--onboarding/SKILL.md` as needed so they stay aligned.
+**Single source for outcome vocabulary:** `docs/outcomes.md` is the canonical glossary for outcome names, proof criteria, and primary skill mappings. When you change any of that, edit `docs/outcomes.md` first, then update pointers and checklists in `README.md`, `docs/framework.md`, `docs/onboarding-checklist.md`, `docs/skills-status.md`, `.agents/code-mint-status.json`, and `.agents/skills/meta--onboarding/SKILL.md` as needed so they stay aligned.
 
 After substantive edits to `README.md`, onboarding docs, or the copy bundle, quickly confirm:
 

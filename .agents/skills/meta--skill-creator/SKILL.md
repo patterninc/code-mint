@@ -219,7 +219,7 @@ When creating a paired auditor and creator:
 - Report format: Summary, itemized findings with severity (Critical/High/Medium/Low), recommended actions
 - Include: `Next Skill / Step`
 - End with: "Run `{creator-skill-name}` to remediate findings."
-- Update `docs/onboarding-checklist.md` after completion. Optionally refresh `docs/skills-status.md` if the repository keeps the compatibility view.
+- Update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the relevant outcome status and date after completion. Optionally refresh `docs/skills-status.md` if the repository keeps the compatibility view.
 
 ### Creator Skills
 
@@ -228,7 +228,7 @@ When creating a paired auditor and creator:
 - Walk through findings collaboratively with the user (do not auto-generate without human input where domain knowledge is required)
 - Add approval checkpoints before any supervised, destructive, or hard-to-reverse action
 - After remediation, archive the report to `.agents/reports/completed/{name}-audit-{YYYY-MM-DD}.md`
-- Update `docs/onboarding-checklist.md` after completion. Optionally refresh `docs/skills-status.md` if the repository keeps the compatibility view.
+- Update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the relevant outcome status and date after completion. Optionally refresh `docs/skills-status.md` if the repository keeps the compatibility view.
 
 ---
 

@@ -35,6 +35,7 @@ Use `docs/outcomes.md` for the glossary and `docs/onboarding-checklist.md` as th
 - Active audit reports live in `.agents/reports/*-audit.md`
 - Archived reports live in `.agents/reports/completed/`
 - Outcome tracking lives in `docs/onboarding-checklist.md`
+- Status fingerprint lives in `.agents/code-mint-status.json` (committed to git)
 - Optional skill-to-outcome compatibility lives in `docs/skills-status.md`
 - Phase decisions and approvals live in `.agents/reports/onboarding-summary.md`
 
@@ -84,6 +85,8 @@ Initialize `.agents/reports/onboarding-summary.md` if it does not exist. Use it 
 - blockers or manual follow-ups
 - which proof should happen next
 - the next recommended PR or phase
+
+Initialize `.agents/code-mint-status.json` if it does not already exist. Copy it from the code-mint template and set `scope` to the onboarding scope path relative to the git root (`.` for repo-root onboarding, or the subdirectory path for scoped onboarding). This file is committed to git and serves as the machine-readable fingerprint for cross-repo scanning.
 
 Ensure `.gitignore` keeps the directories but ignores generated report files:
 
@@ -192,6 +195,8 @@ Run applicable auditors to understand the current state. These are non-destructi
 
 Once scope is known, Phase 1 auditors may run in parallel because they are read-only. Do not parallelize creator or remediation work in later phases unless the scopes are clearly independent and the user approves.
 
+When auditors run in parallel, **do not** have each auditor update `.agents/code-mint-status.json` individually — concurrent writes to the same file lose data. Instead, defer all fingerprint updates to the single "After Phase 1" step below, which writes all outcome statuses in one pass.
+
 ### After Phase 1
 
 Update `docs/onboarding-checklist.md` with:
@@ -199,6 +204,8 @@ Update `docs/onboarding-checklist.md` with:
 - `Validate Current State` = `Proven` when the baseline reports and summary exist and the summary captures what is working, blocked, risky, and next to prove
 - each remaining outcome marked `Not Started`, `In Progress`, `Blocked`, or `N/A` based on the audit findings
 - the next proof to pursue
+
+Update `.agents/code-mint-status.json`: set `onboarded_at` to today's ISO date, and update each outcome's `status` and `date` to match the checklist.
 
 Present a concise summary to the user:
 
@@ -365,10 +372,11 @@ Run each applicable auditor again and compare the new results against the Phase 
 ### Step 5.3: Update Tracking
 
 1. Update `docs/onboarding-checklist.md` with final statuses, evidence, and dates.
-2. Optionally update `docs/skills-status.md` if the repo wants the compatibility view.
-3. Archive completed audit reports to `.agents/reports/completed/`.
-4. Update `.agents/reports/onboarding-summary.md` with what changed, what remains manual, unresolved risks, and the next recommended skill or proof.
-5. Ask whether the user wants to create a commit. Do not commit automatically.
+2. Update `.agents/code-mint-status.json`: set `last_validated` to today's ISO date, and update all outcome statuses and dates to their final values.
+3. Optionally update `docs/skills-status.md` if the repo wants the compatibility view.
+4. Archive completed audit reports to `.agents/reports/completed/`.
+5. Update `.agents/reports/onboarding-summary.md` with what changed, what remains manual, unresolved risks, and the next recommended skill or proof.
+6. Ask whether the user wants to create a commit. Do not commit automatically.
 
 ## Activate Ongoing Skills
 

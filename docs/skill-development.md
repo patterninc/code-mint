@@ -201,6 +201,63 @@ At minimum, every audit report should also make the next handoff obvious:
 
 ---
 
+## Status Fingerprint
+
+Every onboarded repository contains a committed `.agents/code-mint-status.json` file that serves as the machine-readable fingerprint of code-mint onboarding. It is an index for quick scanning, not a replacement for the detailed evidence in `docs/onboarding-checklist.md`.
+
+### Template
+
+```json
+{
+  "code_mint": "1.0",
+  "scope": ".",
+  "onboarded_at": null,
+  "last_validated": null,
+  "outcomes": {
+    "validate_current_state": { "status": "Not Started", "date": null },
+    "navigate": { "status": "Not Started", "date": null },
+    "self_test": { "status": "Not Started", "date": null },
+    "smoke_path": { "status": "Not Started", "date": null },
+    "bug_reproduction": { "status": "Not Started", "date": null },
+    "sre_investigation": { "status": "Not Started", "date": null }
+  }
+}
+```
+
+### Update Rule
+
+Whenever a skill updates `docs/onboarding-checklist.md`, also update `.agents/code-mint-status.json` with the relevant outcome's current `status` and `date`.
+
+**Status values** must be copied exactly from the checklist Status Key — `Not Started`, `In Progress`, `Blocked`, `Proven`, or `N/A`. Case and spacing matter; cross-repo scanners use strict string equality.
+
+**Dates** must use date-only ISO format: `YYYY-MM-DD`. Never use datetime strings, locale dates, or timestamps.
+
+**For `N/A` outcomes**, `date` remains `null`. Scanners should not assume every non-`Not Started` row has a non-null date.
+
+**`Proven` means "last proven with recorded evidence"**, not a live guarantee. If the codebase drifts after proof, the fingerprint does not automatically invalidate. Use `last_validated` and periodic re-audits to detect staleness.
+
+The `meta--onboarding` skill owns the lifecycle fields: `onboarded_at` is set when Phase 1 completes, and `last_validated` is set when Phase 5 verification runs.
+
+### Scoping
+
+The file lives at `.agents/code-mint-status.json` **relative to the onboarding scope root**. For repo-root onboarding this is `./.agents/code-mint-status.json`. For monorepo package onboarding at `packages/api/`, this is `packages/api/.agents/code-mint-status.json`. Skills use bare relative paths and assume the agent's working directory is the scope root.
+
+### Create If Missing
+
+`meta--onboarding` initializes the file during its Prepare Directories step. When a skill runs **standalone** (outside the onboarding playbook) and `.agents/code-mint-status.json` does not exist, the skill should create it from the template before updating. Set `scope` to `.` for repo-root or the appropriate path for scoped onboarding.
+
+### Parallel Writes
+
+When multiple skills run in parallel (for example Phase 1 auditors), do not have each skill update the JSON individually. Concurrent writes to a single JSON file lose data. Instead, defer fingerprint updates to a single step after all parallel skills complete. `meta--onboarding` handles this in its "After Phase 1" step.
+
+### Cross-Repo Scanning
+
+```bash
+find . -name "code-mint-status.json" -exec jq '{path: input_filename, proven: [.outcomes[] | select(.status == "Proven")] | length}' {} \;
+```
+
+---
+
 ## Evaluating Skills
 
 Define success criteria before writing the skill. Evaluate across four dimensions:
@@ -238,7 +295,7 @@ Skills rot when the underlying systems change and the instructions do not.
 
 - **PR rule:** Any PR that changes a workflow, tool, or convention covered by a skill must update the relevant SKILL.md.
 - **Version the skill:** Update the skill when the procedures it encodes change.
-- **Track status:** After running an auditor or creator skill, update `docs/onboarding-checklist.md` with the evidence and current status. Optionally refresh `docs/skills-status.md` if the repository keeps the compatibility view.
+- **Track status:** After running an auditor or creator skill, update `docs/onboarding-checklist.md` and `.agents/code-mint-status.json` with the evidence and current status. Optionally refresh `docs/skills-status.md` if the repository keeps the compatibility view.
 - **Periodic review:** Run auditor skills quarterly to identify drift.
 
 ---

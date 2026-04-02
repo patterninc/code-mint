@@ -14,7 +14,7 @@ The key idea: track progress by proven outcomes, not by how many procedural step
 
 ## Setup
 
-Copy the onboarding bundle into the target repo using the **Quick Start** in the root `README.md` (`TARGET_REPO` / `TARGET_SCOPE`, `git clone` of this library, `cp` of skills and core docs, `.gitignore` for reports). If the target repository already has `.agents/`, `AGENTS.md`, rules, or customized skills, merge deliberately rather than overwriting them.
+Copy the onboarding bundle into the target repo using the **Quick Start** in the root `README.md` (`TARGET_REPO` / `TARGET_SCOPE`, `git clone` of this library, `cp` of skills and core docs, `.agents/code-mint-status.json`, `.gitignore` for reports). If the target repository already has `.agents/`, `AGENTS.md`, rules, or customized skills, merge deliberately rather than overwriting them.
 
 ## What The User Should Understand Immediately
 
@@ -157,6 +157,7 @@ Preserve local `[CUSTOMIZE]` values when adopting upstream changes.
 Designate a Rule Steward or equivalent owner to review changes to:
 
 - `.agents/`
+- `.agents/code-mint-status.json`
 - `AGENTS.md`
 - `SKILL.md`
 - onboarding docs and checklist templates
