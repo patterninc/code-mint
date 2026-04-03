@@ -53,7 +53,10 @@ Check against these criteria:
 {For auditors:}
 Write the report to `.agents/reports/{skill-name}-audit.md` using the format defined in `docs/skill-development.md`.
 
-Ensure `.agents/reports/` and `.agents/reports/completed/` exist with `.gitkeep` files, and ensure generated report files are ignored by `.gitignore`.
+Ensure the report directory exists: `mkdir -p .agents/reports/completed && touch .agents/reports/.gitkeep .agents/reports/completed/.gitkeep`
+
+Ensure `.gitignore` ignores generated report contents while preserving the directories with their `.gitkeep` files.
+
 Include `Next Skill / Step`.
 
 {For creators:}

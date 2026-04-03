@@ -130,7 +130,9 @@ Record which steps would succeed, which are blocked, and which require human dec
 
 ## Output
 
-Ensure the report directories exist: `mkdir -p .agents/reports .agents/reports/completed`
+Ensure the report directories exist: `mkdir -p .agents/reports/completed && touch .agents/reports/.gitkeep .agents/reports/completed/.gitkeep`
+
+Ensure `.gitignore` ignores generated report contents while preserving the directories with their `.gitkeep` files.
 
 Write the report to `.agents/reports/autonomy--runtime-auditor-audit.md`:
 

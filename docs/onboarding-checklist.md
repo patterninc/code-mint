@@ -24,30 +24,90 @@ This file is intended to be copied into the target repository and updated there 
 
 ## Outcome Tracker
 
-| Outcome | Why It Matters | Status | Evidence | Exact Check | Last Validated | Notes |
-|---|---|---|---|---|---|---|
-| `Validate Current State` | The agent can assess the repo before making changes. | Not Started | applicable audit reports plus `.agents/reports/onboarding-summary.md` | Run all applicable Phase 1 auditors and summarize what is working, blocked, risky, and next to prove. | — | Establish this first. |
-| `Navigate` | The agent can explain where to work and why modules exist. | Not Started | `AGENTS.md`, subdirectory `AGENTS.md`, sample repo explanation | Ask the agent to explain the repo map and target module for a sample task, then record the grounded answer. | — | Favor durable repo-local docs over chat-only explanations. |
-| `Self-Test` | The agent can run the smallest relevant automated checks and trust the result. | Not Started | exact test command, test file, CI reference | Run one targeted test path for a real module or behavior change and capture the pass/fail signal. | — | Record what is still manual or flaky. |
-| `Smoke Path` | The agent can prove the runtime is meaningfully usable. | Not Started | runtime guide, screenshot, log excerpt, curl output | Execute one trusted, non-destructive smoke path with documented prerequisites, steps, stop conditions, and success signal. | — | Smallest safe check wins. |
-| `Bug Reproduction` | The agent can reproduce a reported issue before proposing a fix. | Not Started | failing test, script, or repro recipe linked to the issue | Turn one real bug report into a deterministic failing case another person or agent can rerun. | — | The repro is the proof. |
-| `SRE Investigation` | The agent can inspect logs, metrics, traces, CI, or infra evidence. | Not Started | investigation note, query output, linked dashboard/log command | Gather operational evidence, produce a ranked hypothesis, and record the next actions or `N/A` reason. | — | Mark `N/A` only when no operational tooling exists. |
+| Outcome | Status | Last Validated |
+|---|---|---|
+| `Validate Current State` | Not Started | — |
+| `Navigate` | Not Started | — |
+| `Self-Test` | Not Started | — |
+| `Smoke Path` | Not Started | — |
+| `Bug Reproduction` | Not Started | — |
+| `SRE Investigation` | Not Started | — |
 
-## Evidence Log Template
+## Outcome Details
 
-Copy one section per outcome as it moves forward.
+Copy one section per outcome as it moves forward. Each section is the detailed evidence record for that outcome.
 
-```markdown
-### Outcome: [name]
-- Status: [Not Started / Blocked / In Progress / Proven / N/A]
-- Date: [YYYY-MM-DD]
-- Owner: [human or agent]
-- Exact Check: [command, prompt, walkthrough, or scenario]
-- Evidence: [report path, screenshot path, failing test, notes]
-- What Passed: [short summary]
-- What Is Still Missing: [short summary]
-- Next Action: [single next step]
-```
+### Validate Current State
+
+The agent can assess the repo before making changes.
+
+- **Status:** Not Started
+- **Date:** —
+- **Evidence:** applicable audit reports plus `.agents/reports/onboarding-summary.md`
+- **Exact Check:** Run all applicable Phase 1 auditors and summarize what is working, blocked, risky, and next to prove.
+- **What Passed:** —
+- **What Is Still Missing:** —
+- **Next Action:** Establish this first.
+
+### Navigate
+
+The agent can explain where to work and why modules exist.
+
+- **Status:** Not Started
+- **Date:** —
+- **Evidence:** `AGENTS.md`, subdirectory `AGENTS.md`, sample repo explanation
+- **Exact Check:** Ask the agent to explain the repo map and target module for a sample task, then record the grounded answer.
+- **What Passed:** —
+- **What Is Still Missing:** —
+- **Next Action:** Favor durable repo-local docs over chat-only explanations.
+
+### Self-Test
+
+The agent can run the smallest relevant automated checks and trust the result.
+
+- **Status:** Not Started
+- **Date:** —
+- **Evidence:** exact test command, test file, CI reference
+- **Exact Check:** Run one targeted test path for a real module or behavior change and capture the pass/fail signal.
+- **What Passed:** —
+- **What Is Still Missing:** —
+- **Next Action:** Record what is still manual or flaky.
+
+### Smoke Path
+
+The agent can prove the runtime is meaningfully usable.
+
+- **Status:** Not Started
+- **Date:** —
+- **Evidence:** runtime guide, screenshot, log excerpt, curl output
+- **Exact Check:** Execute one trusted, non-destructive smoke path with documented prerequisites, steps, stop conditions, and success signal.
+- **What Passed:** —
+- **What Is Still Missing:** —
+- **Next Action:** Smallest safe check wins.
+
+### Bug Reproduction
+
+The agent can reproduce a reported issue before proposing a fix.
+
+- **Status:** Not Started
+- **Date:** —
+- **Evidence:** failing test, script, or repro recipe linked to the issue
+- **Exact Check:** Turn one real bug report into a deterministic failing case another person or agent can rerun.
+- **What Passed:** —
+- **What Is Still Missing:** —
+- **Next Action:** The repro is the proof.
+
+### SRE Investigation
+
+The agent can inspect logs, metrics, traces, CI, or infra evidence.
+
+- **Status:** Not Started
+- **Date:** —
+- **Evidence:** investigation note, query output, linked dashboard/log command
+- **Exact Check:** Gather operational evidence, produce a ranked hypothesis, and record the next actions or `N/A` reason.
+- **What Passed:** —
+- **What Is Still Missing:** —
+- **Next Action:** Mark `N/A` only when no operational tooling exists.
 
 ## Suggested Evidence Patterns
 

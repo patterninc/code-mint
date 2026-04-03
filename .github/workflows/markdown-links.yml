@@ -19,6 +19,7 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
+          fail: true
           args: >-
             --verbose
             --no-progress

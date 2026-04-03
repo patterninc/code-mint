@@ -15,6 +15,8 @@
 | `Needs Refresh` | The repo changed enough that the prior result may be stale. |
 | `N/A` | The skill does not apply to this repository. |
 
+This status vocabulary is intentionally different from `docs/onboarding-checklist.md`. The checklist tracks **outcome-level** progress (`Proven`, `Blocked`), while this file tracks **skill-level** activity (`Audited`, `Complete`, `Needs Refresh`). The two files serve different purposes and should not be forced into a single vocabulary.
+
 ## Skill-To-Outcome Map
 
 | Skill | Category | Supports Outcome | Status | Last Run | Notes |

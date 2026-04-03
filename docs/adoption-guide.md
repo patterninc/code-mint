@@ -25,8 +25,10 @@ Before asking the user to do much setup work, the onboarding flow should make th
 Open the folder that matches your onboarding scope when you can. If you work from the git repository root instead, state the scope in the prompt so paths for `docs/`, `.agents/`, and `AGENTS.md` stay unambiguous. Example:
 
 ```text
-Use the meta--onboarding skill to assess this repository for AI-first development, keep docs/onboarding-checklist.md updated as the system of record, summarize the findings, and wait for approval before making changes.
+Use the meta--onboarding skill to onboard this repository for AI-first development, keep docs/onboarding-checklist.md updated as the system of record, summarize the findings, and wait for approval before making changes.
 ```
+
+The prompt says "wait for approval before making changes" to reinforce assessment-first mode. Phase 1 runs read-only auditors; remediation begins only after the user reviews the baseline.
 
 When onboarding only a package or subdirectory, add a line such as: `Onboarding scope: [path relative to repo root]. Treat paths as relative to that directory. Also read the git repository root README.md and any README.md files along the path from the repo root to that scope for repo-wide setup, deploy, CI, or environment notes that may not exist under the scope.`
 
