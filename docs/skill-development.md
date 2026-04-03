@@ -170,6 +170,8 @@ The reports directory itself should stay in version control, but generated repor
 | `autonomy--test-readiness-auditor` | `autonomy--test-readiness-creator` |
 | `legibility--auditor` | `legibility--enhancer` |
 
+`autonomy--sre-auditor` is intentionally not paired with a creator. Its remediation path routes to `autonomy--sre-agent`, an operational investigation tool rather than a remediation workflow. The auditor verifies tooling access; the agent uses that access to investigate real issues.
+
 ### Report Format
 
 Auditor reports should follow this structure:
