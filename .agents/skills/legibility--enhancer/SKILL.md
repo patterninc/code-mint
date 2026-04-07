@@ -1,6 +1,6 @@
 ---
 name: legibility--enhancer
-description: Collaboratively walks a human through creating high-quality AGENTS.md files throughout a codebase, implementing progressive disclosure architecture. Use when creating or updating AGENTS.md files, onboarding a repository to agent-first practices, or remediating findings from legibility--auditor. Do not use when evaluating existing documentation coverage (use legibility--auditor) or when creating agent skills (use meta--skill-creator).
+description: Collaboratively walks a human through creating high-quality AGENTS.md files throughout a codebase, implementing progressive disclosure architecture. Use when creating or updating AGENTS.md files, onboarding a repository to agent-first practices, or remediating findings from legibility--auditor. Do not use when evaluating existing documentation coverage (use legibility--auditor) or when creating agent skills (follow `docs/skill-development.md` instead).
 ---
 
 # Legibility Enhancer

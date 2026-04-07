@@ -25,7 +25,7 @@ Thank you for your interest in improving code-mint. This document explains how t
 
 ## Skill Development
 
-See `docs/skill-development.md` for the full guide on creating and maintaining skills, including the auditor/creator pattern, frontmatter format, and validation expectations.
+See `docs/skill-development.md` for the canonical guide on creating and maintaining skills, including the auditor/creator pattern, frontmatter format, validation expectations, and how to revise existing skills without creating overlap.
 
 ## Documentation change checklist (maintainers)
 
