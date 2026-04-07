@@ -388,7 +388,8 @@ Once the onboarding outcomes are proven, these ongoing skills become more useful
 | `autonomy--sre-agent` | When investigating production issues, errors, or incidents |
 | `legibility--auditor` | Quarterly, to audit documentation coverage as the codebase evolves |
 | `autonomy--test-readiness-auditor` | When test infrastructure changes or new modules are added |
-| `meta--skill-creator` | When you need to create new project-specific skills |
+
+If the team later needs project-specific skills, treat that as follow-on library maintenance rather than part of the six-outcome proof loop. Use `docs/skill-development.md` as the canonical guide for authoring or revising those skills.
 
 ### Recommended Cadence
 

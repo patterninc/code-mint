@@ -87,6 +87,24 @@ Helps with environment variables.
 
 ---
 
+## Drafting A Skill
+
+Before writing a new skill, infer as much as you can from the current conversation, repository state, and existing examples. Ask only for the project facts the codebase cannot reveal confidently.
+
+Capture these decisions before you draft:
+
+1. **Category:** which family the skill belongs to (`meta--`, `autonomy--`, `legibility--`, or `clarity--`)
+2. **Purpose:** the concrete task the skill performs
+3. **Trigger boundary:** when the skill should fire and what similar-looking situations should route elsewhere
+4. **Output:** what artifact or change the skill is expected to produce
+5. **Project-local facts:** what belongs in `[CUSTOMIZE]` blocks versus reusable instructions
+6. **Validation:** what signal proves the skill worked, or what kind of human review is required
+7. **Existing asset reuse:** whether this should improve an existing skill instead of creating a new overlapping one
+
+Prefer improving an existing skill over adding a near-duplicate. Stable skill IDs are easier for users and agents to learn, and they reduce routing drift.
+
+---
+
 ## Authoring Principles
 
 ### Conciseness
@@ -278,6 +296,13 @@ Use a small set of 10-20 test prompts to catch regressions:
 - **Explicit invocation:** "Use the $skill-name skill to..." (confirms basic functionality)
 - **Implicit invocation:** Natural language that should trigger the skill without naming it
 - **Negative control:** Prompts that should NOT trigger the skill (catches false positives)
+- **Edge case (optional):** Prompts that stress the fragile parts of the workflow
+
+Review those prompts for three failure modes:
+
+- the description is too vague to trigger reliably
+- the instructions only handle tidy examples instead of realistic user phrasing
+- the skill is overfit to one example instead of a reusable pattern
 
 For high-leverage skills such as onboarding, include scenario coverage:
 
@@ -288,6 +313,20 @@ For high-leverage skills such as onboarding, include scenario coverage:
 - Existing project-local `[CUSTOMIZE]` values that must be preserved
 
 Track these test prompts alongside the skill. Every real-world failure becomes a new test case.
+
+---
+
+## Improving Existing Skills
+
+When revising a skill that already exists:
+
+1. Read the current `SKILL.md` and any linked `references/` files before editing.
+2. Preserve the current skill name unless there is a strong compatibility reason to rename it.
+3. Re-test the current description against realistic trigger prompts and near-miss prompts before rewriting it.
+4. Prefer removing weak or duplicated instructions over adding more prose.
+5. Re-verify that the revised skill is clearer, leaner, and less overfit than before.
+
+If repeated examples keep implying the same deterministic helper, promote that helper into `scripts/` or `references/` instead of asking the agent to reinvent it on each run.
 
 ---
 
